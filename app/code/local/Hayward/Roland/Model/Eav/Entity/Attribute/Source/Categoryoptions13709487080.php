@@ -12,12 +12,9 @@ class Hayward_Roland_Model_Eav_Entity_Attribute_Source_Categoryoptions1370948708
     {
         if (is_null($this->_options))
         {
-            $soap = Mage::helper('roland/raptor');
-
-            var_dump($soap->getAllCategories());
-
-            exit();
+            $this->_options = Mage::helper('roland/raptor')->getAllCategories();
         }
+
         return $this->_options;
     }
 

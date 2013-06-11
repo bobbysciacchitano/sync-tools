@@ -3,7 +3,7 @@
 class Hayward_Roland_Helper_Raptor extends Mage_Core_Helper_Abstract
 {
 
-    const CACHE_KEY_CATEGORIES = 'roland_helper_raptor_categories';
+    const CACHE_ALL_CATEGORIES = 'raptor_all_categories';
 
     /**
      * @var SoapClient 
@@ -24,13 +24,20 @@ class Hayward_Roland_Helper_Raptor extends Mage_Core_Helper_Abstract
      */
     public function getAllCategories($force = false)
     {
-        $categories = array();
+        $categories = $this->_loadCache(self::CACHE_ALL_CATEGORIES);
 
         if(!$categories || $force)
         {
             $raptor = $this->_getRaptorClient();
 
-            var_dump($raptor->GetAllCategories($this->_getRaptorKey()));
+            foreach($raptor->GetAllCategories($this->_getRaptorKey()) as $category)
+            {
+                // Do stuff...
+            }
+
+            $categories = array();
+
+            $this->_saveCache($categories, self::CACHE_ALL_CATEGORIES);
         }
 
         return $categories;
