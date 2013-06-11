@@ -1,6 +1,8 @@
 <?php
+
 class Hayward_Roland_Model_Eav_Entity_Attribute_Source_Categoryoptions13709487080 extends Mage_Eav_Model_Entity_Attribute_Source_Abstract
 {
+
     /**
      * Retrieve all options array
      *
@@ -8,10 +10,13 @@ class Hayward_Roland_Model_Eav_Entity_Attribute_Source_Categoryoptions1370948708
      */
     public function getAllOptions()
     {
-        if (is_null($this->_options)) {
-            $this->_options = array(
-			
-            );
+        if (is_null($this->_options))
+        {
+            $soap = Mage::helper('roland/raptor');
+
+            var_dump($soap->getAllCategories());
+
+            exit();
         }
         return $this->_options;
     }
@@ -96,5 +101,3 @@ class Hayward_Roland_Model_Eav_Entity_Attribute_Source_Categoryoptions1370948708
             ->getFlatUpdateSelect($this->getAttribute(), $store);
     }
 }
-
-			 
