@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Hayward_Roland>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.0.1</version>
+    </Hayward_Roland>
+  </modules>
+</config>

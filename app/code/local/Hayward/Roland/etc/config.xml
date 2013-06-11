@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Hayward_Roland>
+      <version>0.0.1</version>
+    </Hayward_Roland>
+  </modules>
+  <global>
+    <helpers>
+      <roland>
+        <class>Hayward_Roland_Helper</class>
+      </roland>
+    </helpers>
+	<models>
+	  <roland>
+		<class>Hayward_Roland_Model</class>
+		<resourceModel>roland_mysql4</resourceModel>
+	  </roland>
+	</models>
+	<resources>
+	  <categoryattribute1370948708_setup>
+		<setup>
+		  <module>Hayward_Roland</module>
+		  <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </categoryattribute1370948708_setup>
+	  <categoryattribute1370948708_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </categoryattribute1370948708_write>
+	  <categoryattribute1370948708_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </categoryattribute1370948708_read>
+	</resources>
+  </global>    
+    <crontab>
+        <jobs>            
+			<roland_syncproducts>
+                <schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <run><model>roland/cron::syncProducts</model></run>
+            </roland_syncproducts>            
+			<roland_synccategories>
+                <schedule><cron_expr>0 21 * * *</cron_expr></schedule>
+                <run><model>roland/cron::syncCategories</model></run>
+            </roland_synccategories>
+        </jobs>
+    </crontab>
+</config> 

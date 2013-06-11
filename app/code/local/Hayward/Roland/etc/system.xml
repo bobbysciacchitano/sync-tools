@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+	  <sections>
+		<hayward_raptor_setup  translate="label" module="roland">                    
+		<label>RAPTOR Setup</label>
+		<tab>advanced</tab>
+		<frontend_type>text</frontend_type>
+		<sort_order>0</sort_order>
+		<show_in_default>1</show_in_default>
+		<show_in_website>1</show_in_website>
+		<show_in_store>1</show_in_store>            
+					<groups>
+				      <raptor_connection translate="label"> 
+					  <label>RAPTOR Connection</label>
+					  <frontend_type>text</frontend_type>
+					  <sort_order>0</sort_order>
+					  <show_in_default>1</show_in_default>
+					  <show_in_website>1</show_in_website>
+					  <show_in_store>1</show_in_store>
+				       <fields>
+                          <raptor_url translate="label">
+                            <label>RAPTOR URL</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>URL to connect to RAPTOR API</comment>
+                          </raptor_url>
+                          <raptor_key translate="label">
+                            <label>RAPTOR Key</label>
+							<frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment>Key to authenticate RAPTOR requests</comment>
+                          </raptor_key>
+					   </fields>
+					   </raptor_connection>
+					</groups>
+		</hayward_raptor_setup>
+	  </sections>
+</config>
