@@ -10,13 +10,40 @@ class Hayward_Roland_Model_Eav_Entity_Attribute_Source_Categoryoptions1370948708
      */
     public function getAllOptions()
     {
+
         if (is_null($this->_options))
         {
-            $this->_options = Mage::helper('roland/raptor')->getAllCategories();
+            foreach($this->_buildOptions(Mage::helper('roland/raptor')->getAllCategories()) as $id => $option)
+                $this->_options[] = array('label' => $option, 'value' => $id);
         }
 
         return $this->_options;
     }
+
+
+    private function _buildOptions($options, $breadcrumb = array())
+    {
+        $structure = array();
+
+        foreach($options as $key => $option)
+        {
+            $newBreadcrumb = $breadcrumb;
+            $newBreadcrumb[] = $option['name'];
+
+            if(!$option['children'])
+            {
+                $structure[$key] = implode(' > ', $newBreadcrumb);
+                $newBreadcrumb = null;
+            } else {
+                $structure = array_merge($structure, $this->_buildOptions($option['children'], $newBreadcrumb));
+            }
+        }
+
+        asort($structure);
+
+        return $structure;
+    }
+
 
     /**
      * Retrieve option array
