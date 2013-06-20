@@ -5,7 +5,7 @@ $installer->startSetup();
 
 $installer->addAttribute("catalog_category", "roland_sync_id",  array(
     "type"     => "text",
-    "backend"  => "",
+    "backend"  => "roland/eav_entity_attribute_backend_categoryoptions13709487080",
     "frontend" => "",
     "label"    => "Roland Categories",
     "input"    => "multiselect",
