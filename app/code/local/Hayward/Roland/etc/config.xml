@@ -18,7 +18,7 @@
 	  </roland>
 	</models>
 	<resources>
-	  <categoryattribute1370948708_setup>
+	  <raptorcategories_setup>
 		<setup>
 		  <module>Hayward_Roland</module>
 		  <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
@@ -26,17 +26,17 @@
 		<connection>
 		  <use>core_setup</use>
 		</connection>
-	  </categoryattribute1370948708_setup>
-	  <categoryattribute1370948708_write>
+	  </raptorcategories_setup>
+	  <raptorcategories_write>
 		<connection>
 		  <use>core_write</use>
 		</connection>
-	  </categoryattribute1370948708_write>
-	  <categoryattribute1370948708_read>
+	  </raptorcategories_write>
+	  <raptorcategories_read>
 		<connection>
 		  <use>core_read</use>
 		</connection>
-	  </categoryattribute1370948708_read>
+	  </raptorcategories_read>
 	</resources>
   </global>    
     <crontab>

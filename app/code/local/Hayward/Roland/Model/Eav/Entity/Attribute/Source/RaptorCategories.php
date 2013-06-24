@@ -1,6 +1,6 @@
 <?php
 
-class Hayward_Roland_Model_Eav_Entity_Attribute_Source_Categoryoptions13709487080 extends Mage_Eav_Model_Entity_Attribute_Source_Abstract
+class Hayward_Roland_Model_Eav_Entity_Attribute_Source_RaptorCategories extends Mage_Eav_Model_Entity_Attribute_Source_Abstract
 {
 
     /**
