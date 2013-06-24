@@ -30,7 +30,7 @@ class Hayward_Roland_Helper_Raptor extends Mage_Core_Helper_Abstract
         if($this->_useFixtures())
             return Zend_Json::decode(self::FIXTURE_CATEGORY_ARRAY);
 
-        $categories = unserialize($this->_loadCache(self::CACHE_ALL_CATEGORIES));
+        $structure = unserialize($this->_loadCache(self::CACHE_ALL_CATEGORIES));
 
         if(!$categories || $force)
         {
@@ -38,7 +38,7 @@ class Hayward_Roland_Helper_Raptor extends Mage_Core_Helper_Abstract
 
             $structure  = $this->_buildCategoryHierarchy($categories->GetAllCategoriesResult);
 
-            $this->_saveCache(serialize($categories), self::CACHE_ALL_CATEGORIES, array('raptor'));
+            $this->_saveCache(serialize($structure), self::CACHE_ALL_CATEGORIES, array('raptor'));
         }
 
         return $structure;

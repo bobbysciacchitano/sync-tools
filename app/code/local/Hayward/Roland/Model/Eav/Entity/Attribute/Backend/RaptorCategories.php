@@ -1,6 +1,6 @@
 <?php
 
-class Hayward_Roland_Model_Eav_Entity_Attribute_Backend_RaptorCategories extends Mage_Eav_Model_Entity_Attribute_Backend_Abstract
+class Hayward_Roland_Model_Eav_Entity_Attribute_Backend_Raptorcategories extends Mage_Eav_Model_Entity_Attribute_Backend_Abstract
 {
 
     public function beforeSave($object)

@@ -2,7 +2,6 @@
 $installer = $this;
 $installer->startSetup();
 
-
 $installer->addAttribute("catalog_category", "roland_sync_id",  array(
     "type"     => "text",
     "backend"  => "roland/eav_entity_attribute_backend_raptorcategories",
