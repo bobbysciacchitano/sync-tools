@@ -12,10 +12,7 @@ class Hayward_Roland_Model_Eav_Entity_Attribute_Source_RaptorCategories extends 
     {
 
         if (is_null($this->_options))
-        {
-            foreach($this->_buildOptions(Mage::helper('roland/raptor')->getAllCategories()) as $id => $option)
-                $this->_options[] = array('label' => $option, 'value' => $id);
-        }
+            $this->_options = $this->_buildOptions(Mage::helper('roland/raptor')->getAllCategories());
 
         return $this->_options;
     }
@@ -32,14 +29,12 @@ class Hayward_Roland_Model_Eav_Entity_Attribute_Source_RaptorCategories extends 
 
             if(!$option['children'])
             {
-                $structure[$key] = implode(' > ', $newBreadcrumb);
+                $structure[] = array('label' => implode(' > ', $newBreadcrumb), 'value' => $option['id']);
                 $newBreadcrumb = null;
             } else {
                 $structure = array_merge($structure, $this->_buildOptions($option['children'], $newBreadcrumb));
             }
         }
-
-        asort($structure);
 
         return $structure;
     }

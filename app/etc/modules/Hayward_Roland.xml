@@ -4,7 +4,7 @@
     <Hayward_Roland>
       <active>true</active>
       <codePool>local</codePool>
-      <version>0.0.1</version>
+      <version>0.0.3</version>
     </Hayward_Roland>
   </modules>
 </config>

@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
-	<config>
-		<acl>
-			<resources>
-				<admin>
-					<children>
-						<system>
-							<children>
-								<config>
-									<children>
-										<hayward_raptor_setup translate="title" module="roland">
-											<title>RAPTOR Setup Section</title>
-											<sort_order>0</sort_order>
-										</hayward_raptor_setup>
-									</children>
-								</config>
-							</children>
-						</system>
-					</children>
-				</admin>
-			</resources>
-		</acl>
-	</config>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <hayward_raptor_setup translate="title" module="roland">
+                                        <title>RAPTOR Setup Section</title>
+                                        <sort_order>0</sort_order>
+                                    </hayward_raptor_setup>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

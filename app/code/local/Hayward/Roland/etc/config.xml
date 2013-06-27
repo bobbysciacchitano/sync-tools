@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Hayward_Roland>
-      <version>0.0.1</version>
+      <version>0.0.3</version>
     </Hayward_Roland>
   </modules>
   <global>
@@ -42,11 +42,11 @@
     <crontab>
         <jobs>            
 			<roland_syncproducts>
-                <schedule><cron_expr>*/5 * * * *</cron_expr></schedule>
+                <schedule><cron_expr>* * * * *</cron_expr></schedule>
                 <run><model>roland/cron::syncProducts</model></run>
             </roland_syncproducts>            
 			<roland_synccategories>
-                <schedule><cron_expr>0 21 * * *</cron_expr></schedule>
+                <schedule><cron_expr>* * * * *</cron_expr></schedule>
                 <run><model>roland/cron::syncCategories</model></run>
             </roland_synccategories>
         </jobs>

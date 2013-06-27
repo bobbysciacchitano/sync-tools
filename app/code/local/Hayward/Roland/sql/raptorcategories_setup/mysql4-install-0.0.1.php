@@ -13,16 +13,14 @@ $installer->addAttribute("catalog_category", "roland_sync_id",  array(
     "global"   => Mage_Catalog_Model_Resource_Eav_Attribute::SCOPE_STORE,
     "visible"  => true,
     "required" => false,
-    "user_defined"  => false,
-    "default" => "",
-    "searchable" => false,
-    "filterable" => false,
-    "comparable" => false,
-	
+    "user_defined" => false,
+    "default"      => "",
+    "searchable"   => false,
+    "filterable"   => false,
+    "comparable"   => false,
     "visible_on_front"  => false,
-    "unique"     => false,
-    "note"       => ""
+    "unique"       => false,
+    "note"         => ""
+));
 
-	));
 $installer->endSetup();
-	 
